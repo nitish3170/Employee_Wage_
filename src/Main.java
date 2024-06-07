@@ -6,6 +6,10 @@ public class Main {
         if(attendance>0.5) return true;
         return false;
     }
+    public static void DailyWage(){
+        int dailyWage=20*8;
+        System.out.printf("Daily wage of Employee: %d",dailyWage);
+    }
     public static void main(String[] args) {
         Scanner sc =new Scanner(System.in);
         System.out.println("Welcome to Employee Wage Computation Program on Master Branch");
@@ -17,5 +21,7 @@ public class Main {
             System.out.println("Employee is absent");
         }
 
+        DailyWage();
+        
     }
 }
