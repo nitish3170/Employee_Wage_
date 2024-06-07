@@ -10,6 +10,10 @@ public class Main {
         int dailyWage=20*8;
         System.out.printf("Daily wage of Employee: %d",dailyWage);
     }
+    public static void PartTimeWage(){
+        int partTimeWage=20*8;
+        System.out.println("PArt time employee wage: %d");
+    }
     public static void main(String[] args) {
         Scanner sc =new Scanner(System.in);
         System.out.println("Welcome to Employee Wage Computation Program on Master Branch");
@@ -22,6 +26,7 @@ public class Main {
         }
 
         DailyWage();
-        
+        PartTimeWage();
+
     }
 }
