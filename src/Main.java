@@ -105,6 +105,29 @@ public class Main {
         System.out.println("Total Emp Wage: " + totalEmpWage);
 
     }
+
+    private static int UC8_computeEmpWage(String company, int empRatePerHour,int numOfWorkingDays, int maxHoursPerMonth) {
+        int empHrs = 0, totalEmpHrs = 0, totalWorkingDays = 0;
+        while (totalEmpHrs <= maxHoursPerMonth && totalWorkingDays< numOfWorkingDays) {
+            totalWorkingDays++;
+            int empCheck = (int) Math.floor(Math.random() * 10) % 3;
+            switch (empCheck) {
+                case IS_PART_TIME:
+                    empHrs = 4;
+                    break;
+                case IS_FULL_TIME:
+                    empHrs = 8;
+                    break;
+                default:
+                    empHrs = 0;
+            }
+            totalEmpHrs += empHrs;
+            System.out.println("Day#: " + totalWorkingDays + " Emp Hr: " + empHrs);
+        }
+            int totalEmpWage = totalEmpHrs * empRatePerHour;
+            System.out.println("Total Emp Wage for Company: " + company + " is: " + totalEmpWage);
+            return totalEmpWage;
+        }
     public static void main(String[] args) {
         Scanner sc =new Scanner(System.in);
         System.out.println("Welcome to Employee Wage Computation Program on Master Branch");
@@ -114,5 +137,8 @@ public class Main {
         SwitchCase();
         MonthlyWage();
         ConditionalWage();
-    }
+        UC8_computeEmpWage("DMart", 20, 2, 10);
+        UC8_computeEmpWage ("Reliance", 10, 4, 20);
+
+        }
 }
