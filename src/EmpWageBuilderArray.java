@@ -1,4 +1,7 @@
-public class EmpWageBuilderArray {
+interface EmpWage{
+    public int computeEmpWage(CompanyEmpWage companyEmpWage);
+}
+public class EmpWageBuilderArray implements EmpWage{
     public static final int IS_PART_TIME = 1;
     public static final int IS_FULL_TIME = 2;
     private int numOfCompany = 0;
