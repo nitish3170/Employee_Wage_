@@ -41,7 +41,10 @@ public class EmpWageBuilderArrayList implements EmpWage{
                 }
 
                 totalEmpHrs += empHrs;
-                System.out.println("Day#: " + totalWorkingDays + " Emp Hr: " + empHrs);
+                int dailyWage=empHrs*companyEmpWage.empRatePerHour;
+                companyEmpWage.dailyWages.add(dailyWage);
+                System.out.println("Day#: " + totalWorkingDays +" Emp hr: " + empHrs + " Emp wage: " + companyEmpWage.dailyWages.get(totalWorkingDays-1));
+
             }
             return totalEmpHrs * companyEmpWage.empRatePerHour;
         }
